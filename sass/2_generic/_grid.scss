@@ -1,0 +1,21 @@
+// The Littlest Grid System™
+
+$number-of-columns: 12;
+$column-width: 100% / $number-of-columns;
+
+.row {
+	overflow: hidden;
+}
+
+@mixin columns($col, $float: left) {
+	float: $float;
+	width: $col * $column-width;
+
+	&:last-child {
+		&:after {
+			content:'';
+			clear: both;
+			display: table;
+		}
+	}
+}

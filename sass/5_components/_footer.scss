@@ -1,0 +1,26 @@
+// Footer
+
+// Flexbox sticky footer
+
+.flexbox {
+	&,
+	body {
+		height: 100%;
+	}
+
+	body {
+		align-items: stretch;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	.footer-container {
+		margin-top: auto;
+	}
+}
+
+.footer-container {
+	background-color: $chicago;
+	color: $alabaster;
+	margin-top: 2em;
+}

@@ -1,0 +1,20 @@
+// Call to action
+
+.cta-container {
+	background-color: mix($alabaster, $chicago, 90%);
+	padding-bottom: 2em;
+}
+
+.cta__text {
+	@media only screen and (min-width: 600px) {
+		@include columns(8);
+	}
+}
+
+.cta__action {
+	text-align: center;
+	
+	@media only screen and (min-width: 600px) {
+		@include columns(4);
+	}
+}

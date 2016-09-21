@@ -1,0 +1,34 @@
+// Button
+
+.button {
+	background-color: $celery;
+	border-radius: .2em;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em 2em;
+	text-decoration: none;
+	transition: background-color .2s ease;
+
+	&:hover {
+		background-color: saturate(darken($celery, 15%), 25%);
+	}
+
+	&:visited {
+		color: #fff;
+	}
+
+	&:active {
+		transform: scale(.95);
+	}
+}
+
+.button--outline {
+	background-color: transparent;
+	border: 1px solid $chicago;
+	color: $chicago;
+
+	&:hover {
+		background-color: rgba($chicago, 0.1)
+	}
+}

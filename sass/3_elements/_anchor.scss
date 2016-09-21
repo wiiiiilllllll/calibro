@@ -1,0 +1,20 @@
+// <a> element
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:link {}
+
+a:visited {
+	color: lighten($chicago, 10%);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	color: $celery;
+}

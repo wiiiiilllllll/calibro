@@ -1,0 +1,73 @@
+// Nav
+
+.nav {
+	left: 0;
+	opacity: 0;
+	padding: 0 1em;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: all .3s ease;
+
+	&--open {
+		background-color: $alabaster;
+		opacity: 1;
+		transform: scaleY(1);
+		z-index: 30;
+	}
+
+	@media only screen and (min-width: 600px) {
+		left: auto;
+		// margin-right: -1em;
+		opacity: 1;
+		padding: 0;
+		position: relative;
+		right: auto;
+		transform: none;
+	}
+
+	.flexbox & {
+		align-items: center;
+		display: flex;
+		flex-shrink: 0;
+	}
+
+	ul {
+		@include unstyled;
+		width: 100%;
+	}
+}
+
+.nav__item {
+	border-top: 1px solid $chicago;
+	display: block;
+
+	@media only screen and (min-width: 600px) {
+		border-top: none;
+		display: inline-block;
+	}
+}
+
+.nav__link {
+	display: block;
+	padding: 1em .5em;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	.nav__item:last-child & {
+		padding-right: 1em;
+	}
+
+	@media only screen and (min-width: 660px) {
+		font-size: 1.1em;
+	}
+
+	@media only screen and (min-width: 720px) {
+		padding: 1em;
+	}
+}

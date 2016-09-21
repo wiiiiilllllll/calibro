@@ -1,0 +1,35 @@
+// Header
+
+.header-container {
+	background-color: $alabaster;
+	position: relative;
+	z-index: 30;
+}
+
+.header {
+	padding: 1em 0;
+
+	.flexbox & {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.no-flexbox & {
+		&__nav {
+			float: right;
+		}
+	}
+
+	@media only screen and (min-width: 600px) {
+
+	}
+}
+
+.header__logo {
+	display: block;
+	// margin-left: -1em;
+	max-width: 66%;
+	width: 182px;
+
+}
