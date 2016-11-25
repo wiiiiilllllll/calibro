@@ -1,11 +1,13 @@
 // Nav
 
+// <nav>
+// Contains .nav__list
 .nav {
-	left: 0;
+	left: .5em;
 	opacity: 0;
 	padding: 0 1em;
 	position: absolute;
-	right: 0;
+	right: .5em;
 	top: 100%;
 	transform: scaleY(0);
 	transform-origin: top;
@@ -13,14 +15,16 @@
 
 	&--open {
 		background-color: $alabaster;
+		box-shadow: 0 2px 1px rgba($chicago, .5);
 		opacity: 1;
 		transform: scaleY(1);
 		z-index: 30;
 	}
 
 	@media only screen and (min-width: 600px) {
+		box-shadow: none;
+		margin-left: 1em;
 		left: auto;
-		// margin-right: -1em;
 		opacity: 1;
 		padding: 0;
 		position: relative;
@@ -33,13 +37,17 @@
 		display: flex;
 		flex-shrink: 0;
 	}
-
-	ul {
-		@include unstyled;
-		width: 100%;
-	}
 }
 
+// <ul>
+// Contains nav__items
+.nav__list {
+	@include unstyled;
+	width: 100%;
+}
+
+// <li>
+// Contains nav__link
 .nav__item {
 	border-top: 1px solid $chicago;
 	display: block;
@@ -50,17 +58,22 @@
 	}
 }
 
+// <a>
 .nav__link {
 	display: block;
-	padding: 1em .5em;
+	padding: .8em .5em;
 	text-decoration: none;
 
 	&:hover {
 		text-decoration: underline;
 	}
 
-	.nav__item:last-child & {
+	.nav li:last-child & {
 		padding-right: 1em;
+	}
+
+	@media only screen and (min-width: 600px) {
+		padding: 1em .5em;
 	}
 
 	@media only screen and (min-width: 660px) {
@@ -70,4 +83,14 @@
 	@media only screen and (min-width: 720px) {
 		padding: 1em;
 	}
+}
+
+// Perch classes
+.ancestor > a,
+.selected {
+	text-decoration: underline;
+}
+
+.selected a {
+	cursor: default;
 }

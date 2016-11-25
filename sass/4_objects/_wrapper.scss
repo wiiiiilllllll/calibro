@@ -4,4 +4,9 @@
 .wrapper {
 	margin: 0 auto;
 	max-width: $site-width;
+	transition: max-width 1s ease;
+
+	@media only screen and (min-width: $site-width * 2.1) {
+		max-width: 1200px
+	}
 }

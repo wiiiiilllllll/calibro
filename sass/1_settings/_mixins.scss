@@ -6,3 +6,31 @@
 	margin: 0;
 	padding: 0;
 }
+
+@mixin triangle($d: 'right') {
+	border-color: transparent;
+	border-style: solid;
+	border-width: .4em;
+	border-#{$d}-width: 0;
+	content: '';
+	display: inline-block;
+	margin: 0 .5em;
+
+	@if $d == 'top' {
+		border-bottom-color: currentcolor;
+	} @elseif $d == 'right' {
+		border-left-color: currentcolor;
+	} @elseif $d == 'bottom' {
+		border-top-color: currentcolor;
+	} @elseif $d == 'left' {
+		border-right-color: currentcolor;
+	}
+
+	@if $d == 'top' or $d == 'bottom' {
+		border-left-width: .3em;
+		border-right-width: .3em;
+	} @elseif $d == 'left' or $d == 'right' {
+		border-bottom-width: .3em;
+		border-top-width: .3em;
+	}
+}

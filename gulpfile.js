@@ -1,6 +1,5 @@
 // gulpfile
 // Config for 'gulp' task runner - gulpjs.com
-require('es6-promise').polyfill();
 
 
 
@@ -9,13 +8,14 @@ require('es6-promise').polyfill();
 // Load plugins
 // Here we list all the plugins we'll be using, alphabetically please :)
 // All plugins should be installed via npm on user's system
+require('es6-promise').polyfill();
+
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cleancss = require('gulp-clean-css'),
     concat = require('gulp-concat'),
     livereload = require('gulp-livereload'),
     notify = require('gulp-notify'),
-    promise
     pump = require('pump'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),

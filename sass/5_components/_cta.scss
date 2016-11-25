@@ -2,7 +2,19 @@
 
 .cta-container {
 	background-color: mix($alabaster, $chicago, 90%);
-	padding-bottom: 2em;
+	margin-top: auto;
+	padding: 1em 1em 2em;
+}
+
+.cta {
+	align-items: center;
+	display: flex;
+	overflow: hidden;
+}
+
+.cta__heading {
+	font-weight: normal;
+	font-size: 1.6em;
 }
 
 .cta__text {

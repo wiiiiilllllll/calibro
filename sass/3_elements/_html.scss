@@ -5,6 +5,10 @@ html {
 	box-sizing: border-box;
 	font-size: 16px;
 	line-height: 1.4;
+
+	@media only screen and (min-width: $site-width * 2.1) {
+		font-size: 18px;
+	}
 }
 
 * {

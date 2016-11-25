@@ -1,7 +1,6 @@
 // Footer
 
 // Flexbox sticky footer
-
 .flexbox {
 	&,
 	body {
@@ -13,14 +12,30 @@
 		display: flex;
 		flex-flow: column nowrap;
 	}
-
 	.footer-container {
 		margin-top: auto;
+	}
+	.cta-container + .footer-container {
+		margin-top: 0;
 	}
 }
 
 .footer-container {
 	background-color: $chicago;
-	color: $alabaster;
-	margin-top: 2em;
+	color: mix($alabaster, $chicago, 70%);
+	font-size: .8em;
+	padding: .5em 0;
+
+	a {
+		color: inherit;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.footer__left {
+		float: left;
+	}
+	.footer__right {
+		float: right;
+	}
 }

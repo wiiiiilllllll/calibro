@@ -1,4 +1,4 @@
-// overlay
+// Overlay
 
 var overlay = {
 

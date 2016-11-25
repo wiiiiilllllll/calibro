@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -365,7 +366,7 @@ textarea {
   /* 2 */ }
 
 html {
-  color: #5d5d5d;
+  color: #555555;
   font-family: 'Source Sans Pro', sans-serif; }
 
 .row {
@@ -376,7 +377,7 @@ a {
   text-decoration: underline; }
 
 a:visited {
-  color: #777777; }
+  color: #6f6f6f; }
 
 a:hover {
   text-decoration: none; }
@@ -389,6 +390,9 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 1.4; }
+  @media only screen and (min-width: 2016px) {
+    html {
+      font-size: 18px; } }
 
 * {
   box-sizing: inherit; }
@@ -420,17 +424,17 @@ img {
 
 .button--outline {
   background-color: transparent;
-  border: 1px solid #5d5d5d;
-  color: #5d5d5d; }
+  border: 1px solid #555555;
+  color: #555555; }
   .button--outline:hover {
-    background-color: rgba(93, 93, 93, 0.1); }
+    background-color: rgba(85, 85, 85, 0.1); }
 
 .nav {
-  left: 0;
+  left: .5em;
   opacity: 0;
   padding: 0 1em;
   position: absolute;
-  right: 0;
+  right: .5em;
   top: 100%;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -440,12 +444,15 @@ img {
   transition: all .3s ease; }
   .nav--open {
     background-color: #fafafa;
+    box-shadow: 0 2px 1px rgba(85, 85, 85, 0.5);
     opacity: 1;
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
     z-index: 30; }
   @media only screen and (min-width: 600px) {
     .nav {
+      box-shadow: none;
+      margin-left: 1em;
       left: auto;
       opacity: 1;
       padding: 0;
@@ -462,14 +469,15 @@ img {
     display: flex;
     -ms-flex-negative: 0;
         flex-shrink: 0; }
-  .nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%; }
+
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
 
 .nav__item {
-  border-top: 1px solid #5d5d5d;
+  border-top: 1px solid #555555;
   display: block; }
   @media only screen and (min-width: 600px) {
     .nav__item {
@@ -478,12 +486,15 @@ img {
 
 .nav__link {
   display: block;
-  padding: 1em .5em;
+  padding: .8em .5em;
   text-decoration: none; }
   .nav__link:hover {
     text-decoration: underline; }
-  .nav__item:last-child .nav__link {
+  .nav li:last-child .nav__link {
     padding-right: 1em; }
+  @media only screen and (min-width: 600px) {
+    .nav__link {
+      padding: 1em .5em; } }
   @media only screen and (min-width: 660px) {
     .nav__link {
       font-size: 1.1em; } }
@@ -491,9 +502,21 @@ img {
     .nav__link {
       padding: 1em; } }
 
+.ancestor > a,
+.selected {
+  text-decoration: underline; }
+
+.selected a {
+  cursor: default; }
+
 .wrapper {
   margin: 0 auto;
-  max-width: 1020px; }
+  max-width: 960px;
+  -webkit-transition: max-width 1s ease;
+  transition: max-width 1s ease; }
+  @media only screen and (min-width: 2016px) {
+    .wrapper {
+      max-width: 1200px; } }
 
 .hero-container {
   background-color: #afcb4a;
@@ -570,18 +593,21 @@ img {
   display: block;
   max-width: 66%;
   width: 182px; }
+  @media only screen and (max-width: 599px) {
+    .header__logo img {
+      height: 50px; } }
 
 .menu {
   display: block;
   float: right;
-  padding: .75em .5em;
+  padding: .6em 1em;
   z-index: 30; }
   @media only screen and (min-width: 600px) {
     .menu {
       display: none; } }
 
 .overlay {
-  background-color: #5d5d5d;
+  background-color: #555555;
   opacity: 0;
   position: fixed;
   -webkit-transition: opacity .3s ease, z-index 0s linear .4s, z-index 0s linear .4s;
@@ -616,10 +642,22 @@ img {
 .flexbox .footer-container {
   margin-top: auto; }
 
+.flexbox .cta-container + .footer-container {
+  margin-top: 0; }
+
 .footer-container {
-  background-color: #5d5d5d;
-  color: #fafafa;
-  margin-top: 2em; }
+  background-color: #555555;
+  color: #c9c9c9;
+  font-size: .8em;
+  padding: .5em 0; }
+  .footer-container a {
+    color: inherit; }
+
+@media only screen and (min-width: 600px) {
+  .footer__left {
+    float: left; }
+  .footer__right {
+    float: right; } }
 
 .intro {
   padding: 1em 0; }
@@ -650,7 +688,21 @@ img {
 
 .cta-container {
   background-color: #eaeaea;
-  padding-bottom: 2em; }
+  margin-top: auto;
+  padding: 1em 1em 2em; }
+
+.cta {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden; }
+
+.cta__heading {
+  font-weight: normal;
+  font-size: 1.6em; }
 
 @media only screen and (min-width: 600px) {
   .cta__text {
@@ -671,3 +723,71 @@ img {
         content: '';
         clear: both;
         display: table; } }
+
+.service__title {
+  color: #afcb4a;
+  font-weight: 400;
+  font-size: 3em;
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 700px) {
+  .service__left {
+    float: left;
+    width: 50%; }
+    .service__left:last-child:after {
+      content: '';
+      clear: both;
+      display: table; } }
+
+@media only screen and (min-width: 700px) {
+  .service__right {
+    float: left;
+    width: 50%;
+    padding: 0 8.33333%; }
+    .service__right:last-child:after {
+      content: '';
+      clear: both;
+      display: table; } }
+
+.drop__link {
+  font-weight: bold;
+  pointer-events: none; }
+  @media only screen and (min-width: 599px) {
+    .drop__link {
+      font-weight: normal;
+      pointer-events: all; }
+      .drop__link:after {
+        border-color: transparent;
+        border-style: solid;
+        border-width: .4em;
+        border-bottom-width: 0;
+        content: '';
+        display: inline-block;
+        margin: 0 .5em;
+        border-top-color: currentcolor;
+        border-left-width: .3em;
+        border-right-width: .3em; } }
+
+.drop__sub {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa; }
+  @media only screen and (min-width: 600px) {
+    .drop__sub {
+      display: none;
+      position: absolute; }
+      .drop--open .drop__sub {
+        box-shadow: 0 2px 1px rgba(85, 85, 85, 0.5);
+        display: block;
+        width: 14em; } }
+
+.drop__item {
+  display: block !important; }
+  @media only screen and (max-width: 600px) {
+    .drop__sub .drop__item {
+      border-top: 1px dotted; }
+      .drop__sub .drop__item .nav__link:before {
+        content: '» ';
+        display: inline;
+        padding-left: 1em; } }

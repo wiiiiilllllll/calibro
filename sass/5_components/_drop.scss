@@ -1,0 +1,61 @@
+// Drop
+// For drop-down navigation menus
+
+// <ul>, contains drop__link and drop__sub
+.drop {}
+
+// <a>, click this to toggle the dropdown
+.drop__link {
+
+	font-weight: bold;
+	pointer-events: none;
+
+	@media only screen and (min-width: 599px) {
+		font-weight: normal;
+		pointer-events: all;
+
+		&:after {
+			@include triangle('bottom');
+		}
+	}
+}
+
+// <ul>, contains sub-items
+.drop__sub {
+	@include unstyled;
+	background-color: $alabaster;
+
+	.drop--open & {}
+
+	@media only screen and (min-width: 600px) {
+		display: none;
+		position: absolute;
+
+		.drop--open & {
+			box-shadow: 0 2px 1px rgba($chicago, .5);
+			display: block;
+			width: 14em;
+		}
+	}
+}
+
+// <li>, a sub-item
+.drop__item {
+	display: block !important;
+
+	a {
+		// display: block;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.drop__sub & {
+			border-top: 1px dotted;
+
+			.nav__link:before {
+				content: '» ';
+				display: inline;
+				padding-left: 1em;
+			}
+		}
+	}
+}

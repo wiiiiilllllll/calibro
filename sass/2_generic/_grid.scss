@@ -19,3 +19,7 @@ $column-width: 100% / $number-of-columns;
 		}
 	}
 }
+
+@function colwidth($number) {
+	@return $number * $column-width;
+}

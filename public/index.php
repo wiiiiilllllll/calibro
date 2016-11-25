@@ -1,7 +1,7 @@
-<?php include "layouts/head.php" ?>
-<?php include "layouts/header.php" ?>
+<?php include($_SERVER['DOCUMENT_ROOT']."/layouts/head.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT']."/layouts/header.php"); ?>
 <?php perch_content('Hero'); ?>
-<div class="main-container container">
+<div class="container main-container">
 	<main class="main wrapper">
 		<div class="intro row">
 			<div class="intro__text">
@@ -13,5 +13,6 @@
 		</div>
 	</main>
 </div>
-<?php include "layouts/cta.php" ?>
-<?php include "layouts/footer.php" ?>
+<?php perch_content('Call to action'); ?>
+<?php perch_content('Footer'); ?>
+<?php // include($_SERVER['DOCUMENT_ROOT']."/layouts/footer.php"); ?>
