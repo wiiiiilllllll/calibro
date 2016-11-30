@@ -1,0 +1,48 @@
+// blocks
+// like masonry probably
+
+// <div>
+.blocks-container {}
+
+// <ul>
+.blocks {
+	@include unstyled;
+}
+
+// <li>
+.blocks__item {
+	background-color: $celery;
+	border-radius: .2em;
+	box-shadow: 0 1px 2px rgba($chicago, .5);
+	color: $chicago;
+	margin-bottom: 1em;
+	overflow: hidden;
+
+	@media only screen and (min-width: 330px) {
+		// margin: 2%;
+		width: 48%;
+	}
+
+	@media only screen and (min-width: 600px) {
+		// margin: .5%;
+		width: 32%;
+	}
+}
+
+// <img>
+.blocks__image {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.blocks__title {
+	display: block;
+	padding: 1em;
+}
+
+.blocks__title,
+.blocks__link {
+	background-color: $alabaster;
+	color: $chicago;
+}

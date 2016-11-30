@@ -1,3 +1,10 @@
+var blocks = {
+	init: function() {
+		$('.blocks').masonry({
+			gutter: 16
+		});
+	}
+}
 // Debounce: a multi-purpose utility that will prevent a function
 // from being triggered rapidly; eg. within 250ms
 // Courtesy: http://davidwalsh.name/javascript-debounce-function

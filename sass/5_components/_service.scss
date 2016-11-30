@@ -2,13 +2,6 @@
 
 .service {}
 
-.service__title {
-	color: $celery;
-	font-weight: 400;
-	font-size: 3em;
-	margin-bottom: 0;
-}
-
 .service__left {
 	@media only screen and (min-width: 700px) {
 		@include columns(6);
@@ -20,4 +13,8 @@
 		@include columns(6);
 		padding: 0 colwidth(1);
 	}
+}
+
+.service__subimage {
+	margin-top: 2em
 }

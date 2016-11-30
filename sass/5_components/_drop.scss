@@ -1,6 +1,11 @@
 // Drop
 // For drop-down navigation menus
 
+@mixin drop--shadow {
+	box-shadow: 0 2px 1px rgba($chicago, .5);
+	background-color: $alabaster;
+}
+
 // <ul>, contains drop__link and drop__sub
 .drop {}
 
@@ -9,6 +14,10 @@
 
 	font-weight: bold;
 	pointer-events: none;
+
+	.drop--open & {
+		@include drop--shadow;
+	}
 
 	@media only screen and (min-width: 599px) {
 		font-weight: normal;
@@ -23,7 +32,6 @@
 // <ul>, contains sub-items
 .drop__sub {
 	@include unstyled;
-	background-color: $alabaster;
 
 	.drop--open & {}
 
@@ -32,7 +40,7 @@
 		position: absolute;
 
 		.drop--open & {
-			box-shadow: 0 2px 1px rgba($chicago, .5);
+			@include drop--shadow;
 			display: block;
 			width: 14em;
 		}

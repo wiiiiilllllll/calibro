@@ -5,9 +5,9 @@ a {
 	text-decoration: underline;
 }
 
-a:link {}
+:link {}
 
-a:visited {
+:visited {
 	color: lighten($chicago, 10%);
 }
 

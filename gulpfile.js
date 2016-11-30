@@ -41,7 +41,7 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(cleancss())
     .pipe(gulp.dest('public/css'))
-    .pipe(notify({ message: 'Styles task complete' }))
+    .pipe(notify({ message: 'Styles complete' }))
     .pipe(livereload());
 })
 
@@ -53,7 +53,6 @@ gulp.task('styles', function() {
 // Combine all js files to a single file, output as minified & non-minified
 gulp.task('scripts', function() {
     return gulp.src([
-        'scripts/vendor/*.js',
         'scripts/*.js'
     ])
     .pipe(concat('calibro.js'))
@@ -61,6 +60,7 @@ gulp.task('scripts', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('public/js'))
+    .pipe(notify({ message: 'Scripts complete' }))
 });
 
 

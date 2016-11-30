@@ -1,11 +1,13 @@
-<?php include($_SERVER['DOCUMENT_ROOT']."/layouts/head.php"); ?>
-<?php include($_SERVER['DOCUMENT_ROOT']."/layouts/header.php"); ?>
+<?php if (!defined('PERCH_RUNWAY')) include($_SERVER['DOCUMENT_ROOT'].'/perch/runtime.php'); ?>
+<?php perch_layout("global.head"); ?>
+<?php perch_layout("global.header"); ?>
+
 <?php perch_content('Hero'); ?>
 <div class="container main-container">
 	<main class="main wrapper">
-		<h1>/public/services/transport-planning/index.php</h1>	
+		<h1 class="page-heading"><?php perch_pages_title(); ?></h1>
 		<?php perch_content('Service'); ?>
 	</main>
 </div>
 <?php perch_content('Call to action'); ?>
-<?php include($_SERVER['DOCUMENT_ROOT']."/layouts/footer.php"); ?>
+<?php perch_content('Footer'); ?>

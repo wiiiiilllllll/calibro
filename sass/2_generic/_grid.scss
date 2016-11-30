@@ -7,6 +7,9 @@ $column-width: 100% / $number-of-columns;
 	overflow: hidden;
 }
 
+// Usage:
+// @include columns(6);
+// @include columns(2, right);
 @mixin columns($col, $float: left) {
 	float: $float;
 	width: $col * $column-width;

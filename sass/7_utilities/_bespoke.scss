@@ -1,0 +1,28 @@
+// Bespoke page-specific styles that don't fit anywhere else
+
+// Bespoke styles for contact-page form
+.contact-form {
+	border-bottom: 1px solid mix($chicago, $alabaster, 20%);
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+
+	@media only screen and (min-width: 600px) {
+		@include columns(7);
+
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+// Contact page social media text
+.contact-text {
+	@media only screen and (min-width: 600px) {
+		@include columns(5);
+		border-left: 1px solid mix($chicago, $alabaster, 20%);
+		padding-left: 5%;
+	}
+
+	& > p:first-child {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,27 @@
+// Form
+
+.form {}
+
+.form__fieldset {
+	border: 0;
+	margin: 0;
+	padding: .5em 0;
+}
+
+.form__label {
+	display: block;
+
+	@media only screen and (min-width: 600px) {
+		@include columns(3);
+	}
+}
+
+.form__text,
+.form__textarea {
+	display: block;
+	@include columns(12);
+
+	@media only screen and(min-width: 600px) {
+		@include columns(8);
+	}
+}
