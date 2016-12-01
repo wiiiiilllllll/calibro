@@ -1,7 +1,5 @@
 var blocks = {
 	init: function() {
-		$('.blocks').masonry({
-			gutter: 16
-		});
+		$('.blocks').masonry();
 	}
 }

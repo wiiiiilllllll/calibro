@@ -1,8 +1,6 @@
 var blocks = {
 	init: function() {
-		$('.blocks').masonry({
-			gutter: 16
-		});
+		$('.blocks').masonry();
 	}
 }
 // Debounce: a multi-purpose utility that will prevent a function
