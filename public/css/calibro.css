@@ -679,8 +679,9 @@ input, textarea {
   padding: 0 1em; }
   @media only screen and (min-width: 700px) {
     .intro__text {
-      float: right;
-      width: 50%; }
+      float: none;
+      width: 75%;
+      margin: auto; }
       .intro__text:last-child:after {
         content: '';
         clear: both;
