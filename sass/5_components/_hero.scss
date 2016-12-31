@@ -8,7 +8,8 @@
 	position: relative;
 
 	&:after {
-		background-color: $celery;
+		// background-color: $celery;
+		background-color: #def395;
 		display: block;
 		content: '';
 		opacity: .8;
@@ -27,7 +28,7 @@
 	background-color: #fff;
 	background-color: rgba(#fff,.8);
 	padding: 16px;
-	padding: 1rem;
+	padding: 1.1rem;
 	position: relative;
 	z-index: 10;
 
@@ -36,7 +37,7 @@
 	}
 
 	@media only screen and (min-width: 700px) {
-		@include columns(5);
+		@include columns(4.5);
 	}
 }
 

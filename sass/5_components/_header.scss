@@ -27,7 +27,7 @@
 }
 
 .header__logo {
-	@include columns(5);
+	@include columns(4.5);
 	font-size: 0;
 	padding: 0 6%;
 	text-align: center;

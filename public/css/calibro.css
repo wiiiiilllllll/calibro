@@ -367,7 +367,9 @@ textarea {
 
 html {
   color: #555555;
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+  font-weight: 300; }
 
 .row {
   overflow: hidden; }
@@ -388,7 +390,6 @@ a:active {
 html {
   background-color: #fafafa;
   box-sizing: border-box;
-  font-size: 16px;
   line-height: 1.4; }
   @media only screen and (min-width: 2058px) {
     html {
@@ -538,7 +539,7 @@ input, textarea {
   background-size: cover;
   position: relative; }
   .hero-container:after {
-    background-color: #afcb4a;
+    background-color: #def395;
     display: block;
     content: '';
     opacity: .8;
@@ -553,7 +554,7 @@ input, textarea {
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 16px;
-  padding: 1rem;
+  padding: 1.1rem;
   position: relative;
   z-index: 10; }
   @media only screen and (min-width: 400px) {
@@ -567,7 +568,7 @@ input, textarea {
   @media only screen and (min-width: 700px) {
     .hero__banner {
       float: left;
-      width: 41.66667%; }
+      width: 37.5%; }
       .hero__banner:last-child:after {
         content: '';
         clear: both;
@@ -604,7 +605,7 @@ input, textarea {
 
 .header__logo {
   float: left;
-  width: 41.66667%;
+  width: 37.5%;
   font-size: 0;
   padding: 0 6%;
   text-align: center; }
@@ -688,7 +689,7 @@ input, textarea {
   @media only screen and (min-width: 700px) {
     .intro__text {
       float: right;
-      width: 58.33333%; }
+      width: 62.5%; }
       .intro__text:last-child:after {
         content: '';
         clear: both;
