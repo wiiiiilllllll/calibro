@@ -27,14 +27,16 @@
 }
 
 .header__logo {
-	display: block;
-	// margin-left: -1em;
-	max-width: 66%;
-	width: 182px;
+	@include columns(5);
+	font-size: 0;
+	padding: 0 6%;
+	text-align: center;
 
 	@media only screen and (max-width: 599px) {
+		width: auto;
+
 		img {
-			height: 50px;
+			height: 60px;
 		}
 	}
 }
