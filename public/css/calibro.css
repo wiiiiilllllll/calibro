@@ -388,7 +388,7 @@ a:active {
   color: #afcb4a; }
 
 html {
-  background-color: #fafafa;
+  background-color: #fff;
   box-sizing: border-box;
   line-height: 1.4; }
   @media only screen and (min-width: 2058px) {
@@ -410,7 +410,7 @@ img {
   max-width: 100%; }
 
 input, textarea {
-  border: 1px solid #d9d9d9;
+  border: 1px solid #dddddd;
   border-radius: .2em; }
 
 .button {
@@ -452,7 +452,7 @@ input, textarea {
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
   .nav--open {
-    background-color: #fafafa;
+    background-color: #fff;
     box-shadow: 0 2px 1px rgba(85, 85, 85, 0.5);
     opacity: 1;
     -webkit-transform: scaleY(1);
@@ -494,6 +494,7 @@ input, textarea {
 
 .nav__link {
   display: block;
+  font-weight: normal;
   padding: .8em .5em;
   text-decoration: none; }
   .nav__link:hover {
@@ -554,7 +555,7 @@ input, textarea {
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 16px;
-  padding: 1.1rem;
+  padding: 1.5rem;
   position: relative;
   z-index: 10; }
   @media only screen and (min-width: 400px) {
@@ -568,13 +569,14 @@ input, textarea {
   @media only screen and (min-width: 700px) {
     .hero__banner {
       float: left;
-      width: 37.5%; }
+      width: 41.66667%; }
       .hero__banner:last-child:after {
         content: '';
         clear: both;
         display: table; } }
 
 .hero__text {
+  color: #333;
   font-weight: 100; }
   @media only screen and (min-width: 600px) {
     .hero__text {
@@ -584,7 +586,7 @@ input, textarea {
       font-size: 2em; } }
 
 .header-container {
-  background-color: #fafafa;
+  background-color: #fff;
   position: relative;
   z-index: 30; }
 
@@ -605,9 +607,9 @@ input, textarea {
 
 .header__logo {
   float: left;
-  width: 37.5%;
+  width: 41.66667%;
   font-size: 0;
-  padding: 0 6%;
+  padding: 0 3%;
   text-align: center; }
   .header__logo:last-child:after {
     content: '';
@@ -669,7 +671,7 @@ input, textarea {
 
 .footer-container {
   background-color: #555555;
-  color: #c9c9c9;
+  color: #cccccc;
   font-size: .8em;
   padding: .5em 1em; }
   .footer-container a {
@@ -689,7 +691,7 @@ input, textarea {
   @media only screen and (min-width: 700px) {
     .intro__text {
       float: right;
-      width: 62.5%; }
+      width: 58.33333%; }
       .intro__text:last-child:after {
         content: '';
         clear: both;
@@ -709,7 +711,7 @@ input, textarea {
         display: table; } }
 
 .cta-container {
-  background-color: #eaeaea;
+  background-color: #eeeeee;
   margin-top: auto;
   padding: 1em 1em 2em; }
 
@@ -775,7 +777,7 @@ input, textarea {
   pointer-events: none; }
   .drop--open .drop__link {
     box-shadow: 0 2px 1px rgba(85, 85, 85, 0.5);
-    background-color: #fafafa; }
+    background-color: #fff; }
   @media only screen and (min-width: 599px) {
     .drop__link {
       font-weight: normal;
@@ -802,7 +804,7 @@ input, textarea {
       position: absolute; }
       .drop--open .drop__sub {
         box-shadow: 0 2px 1px rgba(85, 85, 85, 0.5);
-        background-color: #fafafa;
+        background-color: #fff;
         display: block;
         width: 14em; } }
 
@@ -919,11 +921,11 @@ input, textarea {
 
 .blocks__title,
 .blocks__link {
-  background-color: #fafafa;
+  background-color: #fff;
   color: #555555; }
 
 .contact-form {
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 2em;
   margin-bottom: 2em; }
   @media only screen and (min-width: 600px) {
@@ -941,7 +943,7 @@ input, textarea {
   .contact-text {
     float: left;
     width: 41.66667%;
-    border-left: 1px solid #d9d9d9;
+    border-left: 1px solid #dddddd;
     padding-left: 5%; }
     .contact-text:last-child:after {
       content: '';

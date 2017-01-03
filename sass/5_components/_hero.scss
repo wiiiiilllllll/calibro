@@ -28,7 +28,7 @@
 	background-color: #fff;
 	background-color: rgba(#fff,.8);
 	padding: 16px;
-	padding: 1.1rem;
+	padding: 1.5rem;
 	position: relative;
 	z-index: 10;
 
@@ -37,11 +37,12 @@
 	}
 
 	@media only screen and (min-width: 700px) {
-		@include columns(4.5);
+		@include columns(5);
 	}
 }
 
 .hero__text {
+	color: #333;
 	font-weight: 100;
 
 	@media only screen and (min-width: 600px) {
