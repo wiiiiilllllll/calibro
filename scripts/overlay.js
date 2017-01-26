@@ -2,6 +2,13 @@
 
 var overlay = {
 
+	init: function(){
+		$(document).on('click', '.overlay', function(){
+			dialog.close();
+			overlay.close();
+		})
+	},
+
 	open: function(){
 		$('.overlay').addClass('overlay--open')
 	},
@@ -14,3 +21,7 @@ var overlay = {
 		$('.overlay').toggleClass('overlay--open')
 	}
 }
+
+$(function(){
+	overlay.init();
+})

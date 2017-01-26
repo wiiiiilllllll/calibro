@@ -1,0 +1,48 @@
+// team
+
+// <div>, contains members
+.team-container {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 1em -2% 0;
+}
+
+// <div>
+.member {
+	// flex: 1 0 6em;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: 48%;
+	letter-spacing: 0.1em;
+	margin: 0 auto 1em;
+	padding: 0 1%;
+	text-align: center;
+
+	@media only screen and (min-width: 480px) {
+		flex-basis: 31%;
+	}
+
+	@media only screen and (min-width: 700px) {
+		flex-basis: 23%;
+	}
+}
+
+// <h3>
+.member__name {
+	margin-bottom: 0;
+}
+
+// <span>
+.member__title {
+	display: block;
+}
+
+// <a>, contains <img>
+.member__link {
+
+	.icon--svg {
+		display: inline-block;
+		margin-top: 1em;
+		max-width: 2em;
+	}
+}

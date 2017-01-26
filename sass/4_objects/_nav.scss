@@ -1,36 +1,36 @@
 // Nav
-// TODO: change this from Y-scale to Y-translate, also maybe push content down instead of overlay?
 
 // <nav>
 // Contains .nav__list
 .nav {
+	background-color: $alabaster;
 	left: .5em;
-	opacity: 0;
-	// padding: 0 1em;
+	max-height: 0;
+	min-height: 0vh;
+	overflow: hidden;
 	position: absolute;
 	right: .5em;
 	top: 100%;
-	transform: scaleY(0);
-	transform-origin: top;
-	transition: all .3s ease;
 
 	&--open {
-		background-color: $alabaster;
 		box-shadow: 0 2px 1px rgba($chicago, .5);
-		opacity: 1;
-		transform: scaleY(1);
-		z-index: 30;
+		max-height: 100vh;
+		min-height: 100vh;
+		transition: all .5s ease;
+	}
+
+	&--closing {
+		transition: all .3s ease;
 	}
 
 	@media only screen and (min-width: 600px) {
 		box-shadow: none;
-		margin-left: 1em;
 		left: auto;
-		opacity: 1;
-		// padding: 0;
+		margin-left: 1em;
+		max-height: none;
+		overflow: visible;
 		position: relative;
 		right: auto;
-		transform: none;
 	}
 
 	.flexbox & {
@@ -63,10 +63,17 @@
 .nav__link {
 	display: block;
 	font-weight: normal; // temp?
+	font-size: 1em;
 	padding: .8em .5em;
 	text-decoration: none;
 
 	&:hover {
+		text-decoration: underline;
+	}
+
+	&--active {
+		cursor: default;
+		pointer-events: none;
 		text-decoration: underline;
 	}
 
@@ -75,15 +82,20 @@
 	}
 
 	@media only screen and (min-width: 600px) {
-		padding: 1em .5em;
+		font-size: .9em;
+		padding: 1.5em .5em;
 	}
 
 	@media only screen and (min-width: 660px) {
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 
 	@media only screen and (min-width: 720px) {
-		padding: 1em;
+		padding: 2em 1em;
+	}
+
+	@media only screen and (min-width: 800px) {
+		font-size: 1.1em;
 	}
 }
 

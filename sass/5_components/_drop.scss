@@ -52,7 +52,8 @@
 	display: block !important;
 
 	a {
-		// display: block;
+		display: block;
+		padding: 1em;
 	}
 
 	@media only screen and (max-width: 600px) {
