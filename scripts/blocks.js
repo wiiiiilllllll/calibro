@@ -1,16 +1,14 @@
 var blocks = {
 	
 	init: function() {
-		// $('.blocks').masonry();
-		$('.blocks').on('click', function(e){
+		$('.block').on('click', function(e){
 			e.preventDefault();
-			blocks.open(e);
+			blocks.open($(this));
 		})
 	},
 
-	open: function(e) {
-		var parent = $(e.target).parents('.block'),
-			back = parent.find('.block__back').html();
+	open: function(block) {
+		var back = block.find('.block__back').html();
 		$('.dialog__body').html(back);
 		setTimeout(function(){
 			overlay.open();

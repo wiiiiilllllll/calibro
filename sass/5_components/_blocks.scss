@@ -13,7 +13,7 @@
 
 // <li>
 .block {
-	background-color: $celery;
+	// background-color: $celery;
 	border-radius: .2em;
 	box-shadow: 0 1px 2px rgba($chicago, .5);
 	color: $chicago;
@@ -22,8 +22,8 @@
 	transition: all .3s ease-in-out;
 
 	&:not(.block--open):hover {
-		box-shadow: 0 .8em 5px -5px rgba($chicago, .2);
-		transform: scale(1.02) translateY(-.4em) rotate(1deg);
+		box-shadow: 0 1px 2px rgba($chicago, .5), 0 .8em 5px -5px rgba($chicago, .2);
+		transform: scale(1.02);
 	}
 
 	@media only screen and (min-width: 320px) {
@@ -41,7 +41,12 @@
 .block__image {
 	display: block;
 	height: auto;
+	transition: all .3s ease;
 	width: 100%;
+
+	.block:hover & {
+		opacity: .9;
+	}
 }
 
 // <span>

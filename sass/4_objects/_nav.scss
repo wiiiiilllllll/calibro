@@ -4,23 +4,27 @@
 // Contains .nav__list
 .nav {
 	background-color: $alabaster;
+	bottom: 100%;
 	left: .5em;
-	max-height: 0;
-	min-height: 0vh;
+	// max-height: 0;
+	// min-height: 0vh;
 	overflow: hidden;
 	position: absolute;
 	right: .5em;
-	top: 100%;
+	// top: initial;
+	transition: all .3s ease;
 
 	&--open {
+		// bottom: initial;
 		box-shadow: 0 2px 1px rgba($chicago, .5);
-		max-height: 100vh;
-		min-height: 100vh;
-		transition: all .5s ease;
+		// max-height: 100vh;
+		// min-height: 100vh;
+		// top: 100%;
+		// transition: all .5s ease;
 	}
 
 	&--closing {
-		transition: all .3s ease;
+		// transition: all .3s ease;
 	}
 
 	@media only screen and (min-width: 600px) {

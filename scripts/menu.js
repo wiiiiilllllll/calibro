@@ -22,19 +22,27 @@ var menu = {
 
 	open: function(){
 		$('.nav').addClass('nav--open');
+		var h = $('.nav').height();
+		$('.nav').css('bottom', '-'+h+'px');
 		overlay.open();
 		menu.isOpen = true;
 		$('.header-container').addClass('isAboveOverlay')
 	},
 
 	close: function(){
-		$('.nav').removeClass('nav--open').addClass('nav--closing');
-		setTimeout(function(){
-			$('.nav').removeClass('nav--closing');
-		}, 300);
+		$('.nav')
+			.removeClass('nav--open')
+			.removeAttr('style');
+			// .addClass('nav--closing');
+
+		// setTimeout(function(){
+		// 	$('.nav').removeClass('nav--closing');
+		// }, 300);
 		overlay.close();
 		menu.isOpen = false;
-		$('.header-container').removeClass('isAboveOverlay')
+		setTimeout(function(){
+			$('.header-container').removeClass('isAboveOverlay')
+		}, 300);
 	},
 
 	toggle: function(){

@@ -3,6 +3,7 @@
 .header-container {
 	background-color: $alabaster;
 	position: relative;
+	transition: z-index 0s linear .3s;
 
 	@media only screen and (max-width: 599px) {
 		&.isAboveOverlay {
@@ -26,8 +27,17 @@
 		}
 	}
 
-	@media only screen and (min-width: 600px) {
-
+	@media only screen and (max-width: 599px) {
+		&:after {
+			background-color: $alabaster;
+			bottom: 0;
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 	}
 }
 
@@ -38,6 +48,7 @@
 	text-align: center;
 
 	@media only screen and (max-width: 599px) {
+		z-index: 20;
 		width: auto;
 
 		img {
