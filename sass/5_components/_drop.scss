@@ -43,7 +43,7 @@
 		.drop--open & {
 			@include drop--shadow;
 			display: block;
-			width: 14em;
+			min-width: 14em;
 		}
 	}
 }
@@ -55,11 +55,18 @@
 	a {
 		display: block;
 		padding: 1em;
+		text-decoration: none;
+		transition: all .2s ease;
+
+		&:hover,
+		&.drop__active {
+			color: $silver;
+		}
 	}
 
 	@media only screen and (max-width: 600px) {
 		.drop__sub & {
-			border-top: 1px dotted mix($chicago, $alabaster, 20%);
+			border-top: 1px dotted $gallery;
 
 			.nav__link:before {
 				content: '» ';

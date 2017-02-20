@@ -1,12 +1,10 @@
     <div class="container footer-container">
-        <footer class="wrapper">
+        <footer class="footer wrapper">
             <div class="footer__left">
-                <perch:content id="footer_left" type="text" label="Footer text - left" />
+                <?php perch_content('Footer left'); ?>
             </div>
             <div class="footer__right">
-                <perch:if exists="footer_right_url">
-                    <a href='<perch:content id="footer_right_url" type="pagelist" label="Page" divider-before="Footer link (optional)" />'><perch:content id="footer_right_text" type="text" label="Link text" /></a>
-                </perch:if>
+                <?php perch_content('Footer right'); ?>
             </div>
         </footer>
     </div>

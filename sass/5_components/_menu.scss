@@ -4,7 +4,8 @@
 	display: block;
 	float: right;
 	padding: .6em 1em;
-	z-index: 30;
+	position: relative;
+	z-index: 20;
 
 	@media only screen and (min-width: 600px) {
 		display: none;

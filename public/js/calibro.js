@@ -74,10 +74,11 @@ var drop = {
 		$('body').on('click', '.drop__link', function(el){
 			el.preventDefault();
 			el.stopPropagation();
-			drop.closeAll();
+			// drop.closeAll();
+				drop.toggle( $(el.target).parent() );
 
 			if ($(this).parents('.drop--open')) {
-				drop.toggle( $(el.target).parent() );
+				// drop.toggle( $(el.target).parent() );
 			}
 		});
 	},

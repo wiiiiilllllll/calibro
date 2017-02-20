@@ -1,6 +1,6 @@
 // <input> elements, also <textarea>
 
 input, textarea {
-	border: 1px solid mix($chicago, $alabaster, 20%);
+	border: 1px solid $gallery;
 	border-radius: .2em;
 }

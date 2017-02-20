@@ -2,7 +2,8 @@
 $site-width: 980px;
 
 // Colours
-// $alabaster: #fafafa;
 $alabaster: #fff;
 $celery: #afcb4a;
-$chicago: #555555;
+$chicago: #555;
+$gallery: mix($chicago, $alabaster, 20%);
+$silver: mix($alabaster, $chicago, 70%);

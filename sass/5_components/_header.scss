@@ -3,15 +3,19 @@
 .header-container {
 	background-color: $alabaster;
 	position: relative;
-	transition: z-index 0s linear .3s;
+	// transition: z-index 0s linear .3s;
+	z-index: 30;
 
 	@media only screen and (max-width: 599px) {
 		&.isAboveOverlay {
-			z-index: 30;
+			// z-index: 30;
 		}
 	}
 }
 
+// <header>
+// is a .wrapper
+// contains .header__primary and .header__secondary
 .header {
 	padding: 1em 0;
 
@@ -21,13 +25,46 @@
 		justify-content: space-between;
 	}
 
-	.no-flexbox & {
-		&__nav {
-			float: right;
-		}
+	@media only screen and (min-width: 600px) {
 	}
 
 	@media only screen and (max-width: 599px) {
+		flex-direction: column;
+	}
+}
+
+// <a>, contains <img>
+.header__logo {
+	font-size: 0;
+	padding: 0 3% 0 0;
+	position: relative;
+	text-align: center;
+
+	@media only screen and (max-width: 599px) {
+		z-index: 20;
+		width: auto;
+
+		img {
+			height: 45px;
+		}
+	}
+}
+
+// <div>, contains .header__logo and .menu (button)
+.header__primary {
+	@media only screen and (min-width: 600px) {
+		// flex: 0 5 25%;
+		margin-right: 1em;
+	}
+
+	@media only screen and (min-width: 680px) {
+		// flex: 0 5 30%;
+		margin-right: 2em;
+	}
+
+	@media only screen and (max-width: 599px) {
+		margin-bottom: 1em;
+
 		&:after {
 			background-color: $alabaster;
 			bottom: 0;
@@ -37,22 +74,55 @@
 			position: absolute;
 			right: 0;
 			top: 0;
+			z-index: 10;
 		}
 	}
 }
 
-.header__logo {
-	@include columns(4.5);
-	font-size: 0;
-	padding: 0 3% 0 0;
-	text-align: center;
+// <div>, contains .header__contact and .nav
+.header__secondary {
+	@media only screen and (min-width: 600px) {
+		flex: 1 0 70%;
+	}
+}
 
-	@media only screen and (max-width: 599px) {
-		z-index: 20;
-		width: auto;
+.header__primary,
+.header__secondary {
+	width: 100%;
+}
 
-		img {
-			height: 60px;
+// <ul>
+.header__contact {
+	@include unstyled;
+	font-size: .9em;
+	position: relative;
+	text-align: right;
+	z-index: 20;
+
+	li {
+		display: inline-block;
+		padding: 0 .5em;
+
+		@media only screen and (max-width: 599px) {
+			padding: .5em;
 		}
+	}
+
+	img {
+		vertical-align: middle;
+		width: 1em;
+	}
+
+	@media only screen and (max-width: 400px) {
+		text-align: center;
+
+		li {
+			// padding: 1% 2%;
+			// width: 46%;
+		}		
+	}
+
+	@media only screen and (min-width: 600px) {
+		padding-right: .5em;
 	}
 }

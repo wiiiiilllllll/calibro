@@ -24,11 +24,21 @@
 	background-color: $chicago;
 	color: mix($alabaster, $chicago, 70%);
 	font-size: .8em;
-	padding: .5em 1em;
+	padding: 1em;
 
 	a {
 		color: inherit;
 	}
+}
+
+footer p {
+	margin: 0;
+}
+
+.footer__right a {
+	display: inline-block;
+	padding: 0 .5em;
+	text-align: right;
 }
 
 @media only screen and (min-width: 600px) {

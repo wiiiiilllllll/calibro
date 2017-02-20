@@ -2,7 +2,7 @@
 
 // Bespoke styles for contact-page form
 .contact-form {
-	border-bottom: 1px solid mix($chicago, $alabaster, 20%);
+	border-bottom: 1px solid $gallery;
 	padding-bottom: 2em;
 	margin-bottom: 2em;
 
@@ -18,7 +18,7 @@
 .contact-text {
 	@media only screen and (min-width: 600px) {
 		@include columns(5);
-		border-left: 1px solid mix($chicago, $alabaster, 20%);
+		border-left: 1px solid $gallery;
 		padding-left: 5%;
 	}
 
