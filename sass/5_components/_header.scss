@@ -94,32 +94,36 @@
 // <ul>
 .header__contact {
 	@include unstyled;
-	font-size: .9em;
+	color: mix($chicago, $gallery, 50%);
+	font-size: .8em;
 	position: relative;
 	text-align: right;
 	z-index: 20;
 
 	li {
-		display: inline-block;
-		padding: 0 .5em;
+		display: block;
+		padding: .5em;
 
-		@media only screen and (max-width: 599px) {
-			padding: .5em;
+		@media only screen and (min-width: 400px) {
+			display: inline-block;
+		}
+
+		@media only screen and (min-width: 600px) {
+			padding: 0 .5em;
 		}
 	}
 
 	img {
 		vertical-align: middle;
 		width: 1em;
+
+		&:hover {
+			opacity: .6;
+		}
 	}
 
 	@media only screen and (max-width: 400px) {
 		text-align: center;
-
-		li {
-			// padding: 1% 2%;
-			// width: 46%;
-		}		
 	}
 
 	@media only screen and (min-width: 600px) {

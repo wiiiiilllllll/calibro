@@ -12,10 +12,7 @@
         </div>
         <div class="header__secondary">
             <ul class="header__contact">
-                <li>0123456789</li>
-                <li>email@example.com</li>
-                <li><img src="perch/resources/twitter-128.png" alt=""></li>
-                <li><img src="perch/resources/fb-art.png" alt=""></li>
+                <?php perch_content('Header contacts'); ?>
             </ul>
             <?php perch_pages_navigation([
                 'template'  => ['nav--level1.html','nav--level2.html']
