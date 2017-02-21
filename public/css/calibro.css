@@ -626,10 +626,15 @@ input, textarea {
   @media only screen and (min-width: 800px) {
     .hero__text {
       font-size: 2em; } }
+  .hero__text p:first-child {
+    margin-top: 0; }
+  .hero__text p:last-child {
+    margin-bottom: 0; }
 
 .header-container {
   background-color: #fff;
-  position: relative; }
+  position: relative;
+  z-index: 20; }
   @media only screen and (max-width: 599px) {
     .header-container.isAboveOverlay {
       z-index: 30; } }
@@ -753,7 +758,7 @@ input, textarea {
 .dialog {
   background: #fff;
   border-radius: .3em;
-  box-shadow: 0 1px 2px rgba(85, 85, 85, 0.5);
+  box-shadow: 0 25px 3px -15px rgba(0, 0, 0, 0.15);
   left: 0;
   margin: auto;
   max-width: 90vw;
@@ -761,7 +766,7 @@ input, textarea {
   padding: 2em;
   position: fixed;
   right: 0;
-  top: 10vh;
+  top: 4em;
   -webkit-transition: all .3s ease, visibility 0s linear;
   transition: all .3s ease, visibility 0s linear;
   visibility: hidden;
@@ -769,7 +774,7 @@ input, textarea {
   z-index: 30; }
   .dialog--open {
     opacity: 1;
-    top: 5vh;
+    top: 2em;
     visibility: visible; }
 
 .dialog__close {
@@ -1095,12 +1100,26 @@ footer p {
   margin-top: 0; }
 
 .team-container {
+  background-color: #def395;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 480px;
+  padding: 1em 0; }
+
+.team-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  margin: 1em -2% 0; }
+      flex-flow: row wrap; }
 
 .member {
   -webkit-box-flex: 0;

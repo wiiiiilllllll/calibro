@@ -13,5 +13,9 @@ var dialog = {
 		setTimeout(function(){
 			$('.dialog__body').html('')
 		}, 300);
+	},
+
+	populate: function(stuff) {
+		$('.dialog__body').html(stuff);
 	}
 }

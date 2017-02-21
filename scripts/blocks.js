@@ -8,8 +8,8 @@ var blocks = {
 	},
 
 	open: function(block) {
-		var back = block.find('.block__back').html();
-		$('.dialog__body').html(back);
+		var stuff = block.find('.block__back').html();
+		dialog.populate(stuff);
 		setTimeout(function(){
 			overlay.open();
 		}, 100);
