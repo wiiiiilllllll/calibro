@@ -4,11 +4,11 @@
 	background-color: $alabaster;
 	position: relative;
 	// transition: z-index 0s linear .3s;
-	z-index: 30;
+	// z-index: 30;
 
 	@media only screen and (max-width: 599px) {
 		&.isAboveOverlay {
-			// z-index: 30;
+			z-index: 30;
 		}
 	}
 }

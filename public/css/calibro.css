@@ -367,7 +367,7 @@ textarea {
 
 html {
   color: #555;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   font-weight: 300; }
 
@@ -629,8 +629,10 @@ input, textarea {
 
 .header-container {
   background-color: #fff;
-  position: relative;
-  z-index: 30; }
+  position: relative; }
+  @media only screen and (max-width: 599px) {
+    .header-container.isAboveOverlay {
+      z-index: 30; } }
 
 .header {
   padding: 1em 0; }
