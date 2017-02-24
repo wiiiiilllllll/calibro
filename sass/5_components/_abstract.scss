@@ -1,0 +1,45 @@
+// Abstracts
+// List of 'media objects'
+
+//  <div>, contains abstract__left and abstract__right
+.abstract {
+	margin-bottom: 4em;
+	margin-top: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+	.abstract__left {
+		@include columns(4);
+	}
+	.abstract__right {
+		@include columns(8);
+		padding-left: 2em;
+	}
+}
+
+// <img>
+.abstract__image {
+	display: block;
+	margin-top: .3em;
+	transition: all .2s ease;
+
+	&:hover {
+		opacity: .8;
+	}
+}
+
+// <h3>, contains abstract__link
+.abstract__heading {
+	margin-top: 0;
+}
+
+// <a>
+.abstract__link {
+	color: $celery;
+	font-weight: normal;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
