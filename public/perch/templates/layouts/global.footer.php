@@ -1,5 +1,5 @@
     <div class="container footer-container">
-        <footer class="footer wrapper">
+        <footer class="footer wrapper row">
             <div class="footer__left">
                 <?php perch_content('Footer left'); ?>
             </div>

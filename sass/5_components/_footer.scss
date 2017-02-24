@@ -22,12 +22,24 @@
 
 .footer-container {
 	background-color: $chicago;
+}
+
+.footer {
 	color: mix($alabaster, $chicago, 70%);
 	font-size: .8em;
-	padding: 1em;
+	padding: 1em 0;
 
 	a {
 		color: inherit;
+	}
+
+	.flexbox & {
+		display: flex;
+		justify-content: space-between;
+
+		@media only screen and (max-width: 600px) {
+			flex-direction: column-reverse;
+		}
 	}
 }
 
@@ -35,17 +47,34 @@ footer p {
 	margin: 0;
 }
 
+.footer__left {
+	margin-right: 1em;
+}
+
+.footer__right {
+	flex-shrink: 0;
+}
+
 .footer__right a {
 	display: inline-block;
 	padding: 0 .5em;
 	text-align: right;
+
+	@media only screen and (max-width: 600px) {
+		&:first-child {
+			padding-bottom: 1em;
+			padding-left: 0;
+		}
+	}
 }
 
-@media only screen and (min-width: 600px) {
-	.footer__left {
-		float: left;
-	}
-	.footer__right {
-		float: right;
+.no-flexbox {
+	@media only screen and (min-width: 600px) {
+		.footer__left {
+			float: left;
+		}
+		.footer__right {
+			float: right;
+		}
 	}
 }
