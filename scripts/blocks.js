@@ -1,7 +1,7 @@
 var blocks = {
 	
 	init: function() {
-		$('.block').on('click', function(e){
+		$('.js-block').on('click', function(e){
 			e.preventDefault();
 			blocks.open($(this));
 		})
@@ -24,3 +24,7 @@ var blocks = {
 		overlay.close();
 	}
 }
+
+$(function(){
+	blocks.init();
+});
