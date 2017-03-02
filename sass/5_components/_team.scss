@@ -18,7 +18,7 @@
 
 // <div>
 .member {
-	// flex: 1 0 6em;
+	cursor: pointer;
 	flex-grow: 0;
 	flex-shrink: 1;
 	flex-basis: 48%;
@@ -39,6 +39,10 @@
 // <h3>
 .member__name {
 	margin-bottom: 0;
+
+	.dialog__body & {
+		margin: 0;
+	}
 }
 
 // <span>
@@ -54,4 +58,39 @@
 		margin-top: 1em;
 		max-width: 2em;
 	}
+}
+
+@media only screen and (min-width: 500px) {
+	.member__image--back {
+		@include columns(4, right);
+		padding-left: 2em;
+	}
+
+	.member__back-header {
+		@include columns(8);
+	}
+
+	.member__back-text {
+		@include columns(12);
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	// <img>, only inside popup
+	.member__image--back {
+		@include columns(6, right);
+	}
+
+	.member__back-header {
+		@include columns(6);
+	}
+
+	.member__back-text {
+		@include columns(6);
+	}
+}
+
+.member__back-text,
+.member__back-header {
+	margin-bottom: 1em;
 }

@@ -13,7 +13,7 @@
 		<?php perch_content('Intro'); ?>
 	</main>
 </div>
-<?php perch_content('Call to action'); ?>
+<?php perch_content('Call to action - team page'); ?>
 <?php perch_layout('global.footer'); ?>
 </body>
 </html>
