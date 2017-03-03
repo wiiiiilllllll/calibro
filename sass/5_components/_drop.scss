@@ -32,6 +32,7 @@
 // <ul>, contains sub-items
 .drop__sub {
 	@include unstyled;
+	z-index: 20;
 
 	.drop--open & {}
 
@@ -42,7 +43,7 @@
 		.drop--open & {
 			@include drop--shadow;
 			display: block;
-			width: 14em;
+			min-width: 14em;
 		}
 	}
 }
@@ -52,12 +53,20 @@
 	display: block !important;
 
 	a {
-		// display: block;
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+		transition: all .2s ease;
+
+		&:hover,
+		&.drop__active {
+			color: $silver;
+		}
 	}
 
 	@media only screen and (max-width: 600px) {
 		.drop__sub & {
-			border-top: 1px dotted;
+			border-top: 1px dotted $gallery;
 
 			.nav__link:before {
 				content: '» ';

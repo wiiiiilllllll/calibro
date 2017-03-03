@@ -3,22 +3,21 @@
 // Is this too specific?
 
 .intro {
-	padding: 1em 0;
+	padding: 1em;
 }
 
 .intro__text {
-	padding: 0 1em;
 	@media only screen and (min-width: 700px) {
-		@include columns(7, right);
+		@include columns(7);
 	}
 }
 
-.intro__image {
-	display: none;
-	padding: 1em 0;
-
+.intro__sidebar {
 	@media only screen and (min-width: 700px) {
-		display: block;
-		@include columns(5);
+		@include columns(4.5, right);
+	}
+
+	li {
+		margin: .5em 0;
 	}
 }

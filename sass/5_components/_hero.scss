@@ -20,6 +20,10 @@
 		bottom: 0;
 		left: 0;
 	}
+
+	@media only screen and (min-width: 600px) {
+		// min-height: 480px;
+	}
 }
 
 .hero {}
@@ -27,34 +31,48 @@
 .hero__banner {
 	background-color: #fff;
 	background-color: rgba(#fff,.8);
-	padding: 16px;
-	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 22px 16px;
+	padding: 2rem 1.5rem;
 	position: relative;
 	z-index: 10;
 
 	@media only screen and (min-width: 400px) {
+		@include columns(8);
+	}
+
+	@media only screen and (min-width: 600px) {
 		@include columns(6);
 	}
 
-	@media only screen and (min-width: 700px) {
-		@include columns(5);
+	@media only screen and (min-width: 800px) {
+		@include columns(4.5);
+		min-height: 480px;
+		padding: 1.5rem;
 	}
 }
 
 .hero__text {
 	color: #333;
+	font-size: 1.2em;
 	font-weight: 100;
 
 	@media only screen and (min-width: 600px) {
 		font-size: 1.5em;
 	}
 
-	@media only screen and (min-width: 800px) {
+	@media only screen and (min-width: 1000px) {
 		font-size: 2em;
 	}
 
-	p {
-		// margin: 0;
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 }
 

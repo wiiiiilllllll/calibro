@@ -1,17 +1,12 @@
 <perch:before>
-<ul class="drop__sub">
 </perch:before>
 
     <li class="drop__item">
-        <a href="<perch:pages id="pagePath" />" class="nav__link">
+        <a href="<perch:pages id="pagePath" />" <perch:if exists="current_page">class="drop__active"</perch:if>>
             <perch:pages id="pageNavText" />
         </a>
         <perch:pages id="subitems" encode="false" />
     </li>
 
 <perch:after>
-	<li class="drop__item">
-		<a href="<perch:pages id="pagePath" />" class="nav__link">see all</a>
-	</li>
-</ul>
 </perch:after>

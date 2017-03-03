@@ -43,5 +43,6 @@
 	</main>
 </div>
 <?php perch_content('Call to action'); ?>
-<?php perch_content('Footer'); ?>
-<script>loadJS('/js/vendor/masonry-4.1.1.js',function(){blocks.init()})</script>
+<?php perch_layout('global.footer'); ?>
+</body>
+</html>

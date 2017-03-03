@@ -3,9 +3,19 @@
 .header-container {
 	background-color: $alabaster;
 	position: relative;
-	z-index: 30;
+	// transition: z-index 0s linear .3s;
+	z-index: 20;
+
+	@media only screen and (max-width: 599px) {
+		&.isAboveOverlay {
+			z-index: 30;
+		}
+	}
 }
 
+// <header>
+// is a .wrapper
+// contains .header__primary and .header__secondary
 .header {
 	padding: 1em 0;
 
@@ -15,28 +25,115 @@
 		justify-content: space-between;
 	}
 
-	.no-flexbox & {
-		&__nav {
-			float: right;
-		}
+	@media only screen and (min-width: 600px) {
 	}
 
-	@media only screen and (min-width: 600px) {
-
+	@media only screen and (max-width: 599px) {
+		flex-direction: column;
 	}
 }
 
+// <a>, contains <img>
 .header__logo {
-	@include columns(5);
+	float: left;
 	font-size: 0;
-	padding: 0 3%;
+	padding: 0 3% 0 0;
+	position: relative;
 	text-align: center;
 
 	@media only screen and (max-width: 599px) {
+		z-index: 20;
 		width: auto;
 
 		img {
-			height: 60px;
+			height: 45px;
 		}
+	}
+}
+
+// <div>, contains .header__logo and .menu (button)
+.header__primary {
+
+	@media only screen and (min-width: 600px) {
+		// flex: 0 5 25%;
+		margin-right: 1em;
+	}
+
+	@media only screen and (min-width: 680px) {
+		// flex: 0 5 30%;
+		margin-right: 2em;
+	}
+
+	@media only screen and (max-width: 599px) {
+		&:after {
+			background-color: $alabaster;
+			bottom: 0;
+			content: '';
+			display: block;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 10;
+		}
+	}
+}
+
+// <div>, contains .header__contact and .nav
+.header__secondary {
+	@media only screen and (min-width: 600px) {
+		flex: 1 0 auto;
+	}
+}
+
+@media only screen and (max-width: 599px) {
+	.header__primary,
+	.header__secondary {
+		width: 100%;
+	}
+}
+
+// <ul>
+.header__contact {
+	@include unstyled;
+	color: mix($chicago, $gallery, 50%);
+	font-size: .8em;
+	position: relative;
+	text-align: right;
+	text-indent: 0;
+	z-index: 20;
+
+	li {
+		display: block;
+		padding: .5em;
+
+		@media only screen and (min-width: 400px) {
+			display: inline-block;
+		}
+
+		@media only screen and (min-width: 600px) {
+			padding: 0 .5em;
+		}
+	}
+
+	img {
+		vertical-align: middle;
+		height: 1.4em;
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+
+	@media only screen and (max-width: 420px) {
+		display: none;
+	}
+
+	@media only screen and (max-width: 599px) {
+		margin-top: 1em;
+	}
+
+	@media only screen and (min-width: 600px) {
+		padding-right: .5em;
 	}
 }

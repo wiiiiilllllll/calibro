@@ -7,11 +7,13 @@
 // <ul>
 .blocks {
 	@include unstyled;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 // <li>
-.blocks__item {
-	background-color: $celery;
+.block {
+	// background-color: $celery;
 	border-radius: .2em;
 	box-shadow: 0 1px 2px rgba($chicago, .5);
 	color: $chicago;
@@ -19,9 +21,9 @@
 	margin: 0 0 1em;
 	transition: all .3s ease-in-out;
 
-	&:hover {
-		box-shadow: 0 .8em 5px -5px rgba($chicago, .2);
-		transform: scale(1.02) translateY(-.4em) rotate(1deg);
+	&:not(.block--open):hover {
+		box-shadow: 0 1px 2px rgba($chicago, .5), 0 .8em 5px -5px rgba($chicago, .2);
+		transform: scale(1.02);
 	}
 
 	@media only screen and (min-width: 320px) {
@@ -36,24 +38,44 @@
 }
 
 // <img>
-.blocks__image {
+.block__image {
 	display: block;
 	height: auto;
+	transition: all .3s ease;
 	width: 100%;
+
+	.block:hover & {
+		opacity: .9;
+	}
 }
 
-.blocks__title {
+// <span>
+.block__title {
 	display: block;
 	padding: 1em;
 	text-align: center;
 }
 
-.blocks__link {
+.block__link {
 	text-decoration: none;
 }
 
-.blocks__title,
-.blocks__link {
+.block__title,
+.block__link {
 	background-color: $alabaster;
 	color: $chicago;
+}
+
+// <div>
+.block__back {
+	display: none;
+}
+
+.block__back__image {
+	margin: auto;
+	width: 80%;
+}
+
+.block__back__title {
+	margin-top: 0;
 }

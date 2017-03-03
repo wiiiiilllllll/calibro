@@ -2,14 +2,18 @@
 <?php perch_layout("global.head"); ?>
 <?php perch_layout("global.header"); ?>
 
-<?php perch_content('Hero'); ?>
+<div class="team-container">
+	<div class="team-wrapper wrapper">
+		<?php perch_content('Team Members'); ?>
+	</div>
+</div>
 <div class="container main-container">
 	<main class="main wrapper">
-		
-		<h1>/public/team/index.php</h1>
-		<?php include(str_replace('/', DIRECTORY_SEPARATOR, '../perch/templates/pages/default.php')); ?>
-
+		<h1 class="page-heading"><?php perch_content('Heading'); ?></h1>
+		<?php perch_content('Intro'); ?>
 	</main>
 </div>
-<?php perch_content('Call to action'); ?>
-<?php perch_content('Footer'); ?>
+<?php perch_content('Call to action - team page'); ?>
+<?php perch_layout('global.footer'); ?>
+</body>
+</html>

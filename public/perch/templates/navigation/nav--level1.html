@@ -1,18 +1,33 @@
 <perch:before>
-<nav class="nav header__nav">
+<nav class="nav header__nav js-menu">
 <ul class="nav__list">
 </perch:before>
 
-    <li class="nav__item drop">
-        <perch:if exists="subitems">
-        <a href="<perch:pages id="pagePath" />" class="nav__link drop__link">
-        <perch:else />
-        <a href="<perch:pages id="pagePath" />" class="nav__link">
-        </perch:if>
-            <perch:pages id="pageNavText" />
-        </a>
-        <perch:pages id="subitems" encode="false" />
+<li class="nav__item <perch:if exists="subitems">drop</perch:if>">
+  <a href="<perch:pages id="pagePath" />" class="
+    <!--* Class BEGIN *-->
+    <perch:if exists="subitems">
+    nav__link drop__link <perch:if exists="current_page OR ancestor_page">nav__link--ancestor</perch:if>
+    <perch:else />
+    nav__link <perch:if exists="current_page">nav__link--active</perch:if>
+    </perch:if>
+  "><!--* Class END *-->
+    <perch:pages id="pageNavText" />
+  </a>
+  <perch:if exists="subitems">
+  <ul class="drop__sub">
+    <li class="drop__item">
+      <a href="<perch:pages id="pagePath" />" class="
+        <!--* Class begin *-->
+        <perch:if exists="current_page">active</perch:if>
+        <perch:if exists="ancestor_page">ancestor</perch:if>
+        "><!--* Class end *-->
+        overview</a>
     </li>
+  <perch:pages id="subitems" encode="false" />
+  </ul>
+</perch:if>
+</li>
 
 <perch:after>
 </ul>

@@ -1,8 +1,33 @@
 var blocks = {
+	
 	init: function() {
-		$('.blocks').masonry();
+		$('.js-block').on('click', function(e){
+			e.preventDefault();
+			blocks.open($(this));
+		})
+	},
+
+	open: function(block) {
+		var stuff = block.find('.block__back').html();
+		dialog.populate(stuff);
+		setTimeout(function(){
+			overlay.open();
+		}, 100);
+		setTimeout(function(){
+			dialog.open();
+		}, 200);
+	},
+
+	close: function() {
+		$('.block--open').removeClass('block--open');
+		dialog.close();
+		overlay.close();
 	}
 }
+
+$(function(){
+	blocks.init();
+});
 // Debounce: a multi-purpose utility that will prevent a function
 // from being triggered rapidly; eg. within 250ms
 // Courtesy: http://davidwalsh.name/javascript-debounce-function
@@ -22,6 +47,27 @@ function debounce(func, wait, immediate) {
     };
 }
 
+// Dialog
+
+var dialog = {
+
+	open: function(){
+		$('.dialog').addClass('dialog--open');
+		$('body').addClass('body--frozen');
+	},
+
+	close: function(){
+		$('.dialog').removeClass('dialog--open');
+		$('body').removeClass('body--frozen');
+		setTimeout(function(){
+			$('.dialog__body').html('')
+		}, 300);
+	},
+
+	populate: function(stuff) {
+		$('.dialog__body').html(stuff);
+	}
+}
 // Drop
 // For drop-down navigation menus
 
@@ -36,10 +82,11 @@ var drop = {
 		$('body').on('click', '.drop__link', function(el){
 			el.preventDefault();
 			el.stopPropagation();
-			drop.closeAll();
+			// drop.closeAll();
+				drop.toggle( $(el.target).parent() );
 
 			if ($(this).parents('.drop--open')) {
-				drop.toggle( $(el.target).parent() );
+				// drop.toggle( $(el.target).parent() );
 			}
 		});
 	},
@@ -68,9 +115,17 @@ $(function(){
 // For opening/closing the mobile menu
 
 var menu = {
+	isOpen: false,
+
 	init: function(){
 		$(document).on('click','.menu',function(){
 			menu.toggle();
+		});
+
+		$(document).on('click', '.overlay', function(){
+			if (menu.isOpen) {
+				menu.close();
+			}
 		});
 		
 		$(window).resize(function() {
@@ -80,21 +135,39 @@ var menu = {
 
 	open: function(){
 		$('.nav').addClass('nav--open');
+		var h = $('.nav').height();
+		$('.nav').css('bottom', '-'+h+'px');
 		overlay.open();
+		menu.isOpen = true;
+		$('.header-container').addClass('isAboveOverlay')
 	},
 
 	close: function(){
-		$('.nav').removeClass('nav--open');
+		$('.nav')
+			.removeClass('nav--open')
+			.removeAttr('style');
+			// .addClass('nav--closing');
+
+		// setTimeout(function(){
+		// 	$('.nav').removeClass('nav--closing');
+		// }, 300);
 		overlay.close();
+		menu.isOpen = false;
+		setTimeout(function(){
+			$('.header-container').removeClass('isAboveOverlay')
+		}, 300);
 	},
 
 	toggle: function(){
-		$('.nav').toggleClass('nav--open');
-		overlay.toggle();
+		if (menu.isOpen) {
+			menu.close();
+		} else {
+			menu.open();
+		}
 	},
 
 	watch: debounce(function() {
-		if ( $(window).width() > 600) {
+		if ( ($(window).width() > 600) && menu.isOpen ) {
 			menu.close()
 		}
 	}, 250)
@@ -106,6 +179,13 @@ $(function() {
 // Overlay
 
 var overlay = {
+
+	init: function(){
+		$(document).on('click', '.overlay', function(){
+			dialog.close();
+			overlay.close();
+		})
+	},
 
 	open: function(){
 		$('.overlay').addClass('overlay--open')
@@ -119,3 +199,7 @@ var overlay = {
 		$('.overlay').toggleClass('overlay--open')
 	}
 }
+
+$(function(){
+	overlay.init();
+})

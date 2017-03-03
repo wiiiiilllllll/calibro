@@ -1,0 +1,11 @@
+// icons
+
+.icon {
+	fill: $chicago;
+	transition: all 1s ease;
+
+	&:hover {
+		fill: $celery;
+		transition: all .2s ease;
+	}
+}
