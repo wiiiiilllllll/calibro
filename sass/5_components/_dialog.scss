@@ -16,6 +16,10 @@
 	visibility: hidden;
 	width: 900px;
 	z-index: 30;
+
+	@media only screen and (min-width: $bk-site) {
+		width: 1320px;
+	}
 	
 	&--open {
 		opacity: 1;

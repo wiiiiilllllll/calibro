@@ -1,0 +1,65 @@
+// Blog list
+// List of excerpts on the News homepage
+
+// <ul>
+.blog-list {
+	@include unstyled;
+}
+
+// <li>
+.blog-list__item {
+	padding-bottom: 2em;
+	padding-top: 2em;
+
+	& + & {
+		border-top: 1px solid $gallery;
+	}
+}
+
+// <a>, wraps all contents inside <li>
+.blog-list__link {
+	display: block;
+	text-decoration: none;
+
+	&:hover h2 {
+		text-decoration: underline;
+	}
+}
+
+// <div>, contains img
+.blog-list__image-wrap {
+	@include columns(2);
+	margin-right: colwidth(0.5);
+}
+
+// <div>, contains title & excerpt text
+.blog-item__wrap {
+
+	.has-image & {
+		@include columns(9);
+	}
+}
+
+// <h2>
+.blog-list__title {
+	color: $celery;
+	font-weight: 400;
+	margin-bottom: 0;
+	margin-top: 0;
+
+	@media only screen and (max-width: 600px) {
+		font-size: 1em;
+	}
+}
+
+// <p>
+.blog-list__date {
+	font-size: $font-size-smaller;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+//
+.blog-list__excerpt p:last-child {
+	margin-bottom: 0;
+}

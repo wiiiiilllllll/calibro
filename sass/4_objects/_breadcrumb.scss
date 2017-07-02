@@ -1,0 +1,15 @@
+// Breadcrumb
+
+.breadcrumb {
+	@include unstyled;
+	font-size: $font-size-smaller;
+
+	li {
+		display: inline-block;
+		margin-right: .3em;
+
+		& + li:before {
+			content: "> ";
+		}
+	}
+}

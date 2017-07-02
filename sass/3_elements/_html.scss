@@ -6,7 +6,7 @@ html {
 	box-sizing: border-box;
 	line-height: 1.4;
 
-	@media only screen and (min-width: $site-width * 2.1) {
+	@media only screen and (min-width: $bk-site) {
 		font-size: 18px;
 	}
 }

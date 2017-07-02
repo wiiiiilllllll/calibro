@@ -1,6 +1,10 @@
 html {
 	color: $chicago;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
+	font-size: $font-size;
 	font-weight: 300;
+	// Allow extra-long text to break over multiple lines if necessary
+	// sometimes useful for long URLs
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }

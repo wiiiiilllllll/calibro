@@ -19,7 +19,7 @@
 		@include drop--shadow;
 	}
 
-	@media only screen and (min-width: 599px) {
+	@media only screen and (min-width: $bk-nav) {
 		font-weight: normal;
 		pointer-events: all;
 
@@ -36,7 +36,7 @@
 
 	.drop--open & {}
 
-	@media only screen and (min-width: 600px) {
+	@media only screen and (min-width: $bk-nav) {
 		display: none;
 		position: absolute;
 
@@ -64,7 +64,12 @@
 		}
 	}
 
-	@media only screen and (max-width: 600px) {
+	@media only screen and (min-width: 500px) and (max-width: $bk-nav) {
+		float: left;
+		width: 50%;
+	}
+
+	@media only screen and (max-width: $bk-nav) {
 		.drop__sub & {
 			border-top: 1px dotted $gallery;
 

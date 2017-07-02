@@ -1,0 +1,13 @@
+// Back link
+// Links back to parent page
+// Initially only used on news posts
+
+.back-link {
+	font-size: $font-size-smaller;
+
+	&:before {
+		content: "\2190";
+		display: inline-block;
+		margin-right: .5em;
+	}
+}

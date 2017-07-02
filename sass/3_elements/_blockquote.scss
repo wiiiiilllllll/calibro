@@ -1,0 +1,9 @@
+// Blockquote
+// Hoping to keep this fairly generic, imagine it'll only be used in news posts
+
+blockquote {
+	border-left: .3em solid $gallery;
+	font-style: italic;
+	margin-left: 1em;
+	padding-left: 1em;
+}

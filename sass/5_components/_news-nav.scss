@@ -1,0 +1,23 @@
+// News nav
+// "Prev" and "Next" links on a news post page
+
+.news-nav {
+	border-top: 1px solid $silver;
+	display: flex;
+	font-size: $font-size-smaller;
+	justify-content: space-between;
+	padding: .5em 0 0;
+	text-transform: uppercase;
+
+	@media only screen and (min-width: 600px) {
+		max-width: colwidth(7)
+	}
+}
+
+.news-nav__link {}
+
+.news-nav__link--disabled {
+	color: $dust;
+	cursor: default;
+	text-decoration: none;
+}

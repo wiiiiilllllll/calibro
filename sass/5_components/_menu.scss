@@ -3,11 +3,12 @@
 .menu {
 	display: block;
 	float: right;
+	font-size: .75em;
 	padding: .6em 1em;
 	position: relative;
 	z-index: 20;
 
-	@media only screen and (min-width: 600px) {
+	@media only screen and (min-width: $bk-nav) {
 		display: none;
 	}
 }

@@ -1,9 +1,18 @@
 // Variables
 $site-width: 980px;
+$site-width-big: 1400px;
+$bk-nav: 700px;
+$bk-site: 2000px;
 
 // Colours
 $alabaster: #fff;
 $celery: #afcb4a;
+$celery-light: #def395;
 $chicago: #555;
 $gallery: mix($chicago, $alabaster, 20%);
-$silver: mix($alabaster, $chicago, 70%);
+$silver: mix($chicago, $alabaster, 35%);
+$dust: mix($chicago, $alabaster, 50%);
+
+// Typography
+$font-size: 17px;
+$font-size-smaller: .7647059em; // 13px
