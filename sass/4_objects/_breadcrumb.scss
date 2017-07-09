@@ -3,6 +3,7 @@
 .breadcrumb {
 	@include unstyled;
 	font-size: $font-size-smaller;
+	margin-top: 2em;
 
 	li {
 		display: inline-block;

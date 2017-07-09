@@ -1,20 +1,20 @@
-// An "Our Services" page
+// Used for Services pages and blog posts
 
-.service {}
+.article {}
 
-.service__left {
+.article__left {
 	@media only screen and (min-width: 700px) {
 		@include columns(6);
 	}
 }
 
-.service__right {
+.article__right {
 	@media only screen and (min-width: 700px) {
 		@include columns(6);
 		padding: 0 colwidth(1);
 	}
 }
 
-.service__subimage {
+.article__subimage {
 	margin-top: 2em
 }

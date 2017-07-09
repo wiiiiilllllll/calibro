@@ -1,0 +1,50 @@
+// Article
+// Contents of news post
+// Aka a blog post
+// This component really shouldn't have three names, but fuck it
+
+// .article {}
+
+// // Contains heading, meta, and article copy
+// // Does not contain image
+// @media only screen and (min-width: 600px) {
+// 	.article__text {
+// 		// @include columns(8);
+// 		h1, .meta, .description {
+// 			max-width: colwidth(7);
+// 		}
+// 	}
+// }
+
+// .article__image {
+// 	@media only screen and (min-width: 600px) {
+// 		@include columns(4, right);
+// 		margin-bottom: 2em;
+// 	}
+// }
+
+// .article__heading {
+// 	font-size: .6em;
+// 	line-height: 1.2;
+
+// 	@media only screen and (min-width: 900px) {
+// 		font-size: 1em;
+// 	}
+
+// 	a {
+// 		@extend .page-heading;
+// 		text-decoration: none;
+
+// 		&:hover {
+// 			text-decoration: underline;
+// 		}
+// 	}
+// }
+
+// .article__meta {
+// 	$radius: .7em;
+// 	color: $dust;
+// 	font-size: $font-size-smaller;
+// 	position: relative;
+// 	text-transform: uppercase;
+// }
