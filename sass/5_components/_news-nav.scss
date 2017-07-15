@@ -6,11 +6,12 @@
 	display: flex;
 	font-size: $font-size-smaller;
 	justify-content: space-between;
+	margin-top: 1em;
 	padding: .5em 0 0;
 	text-transform: uppercase;
 
 	@media only screen and (min-width: 600px) {
-		max-width: colwidth(7)
+		// max-width: colwidth(7)
 	}
 }
 
