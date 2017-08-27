@@ -3,7 +3,6 @@
 .header-container {
 	background-color: $alabaster;
 	position: relative;
-	// transition: z-index 0s linear .3s;
 	z-index: 20;
 
 	@media only screen and (max-width: ($bk-nav - 1px)) {
@@ -56,12 +55,10 @@
 .header__primary {
 
 	@media only screen and (min-width: $bk-nav) {
-		// flex: 0 5 25%;
 		margin-right: 1em;
 	}
 
 	@media only screen and (min-width: calc($bk-nav - (2em))) {
-		// flex: 0 5 30%;
 		margin-right: 2em;
 	}
 

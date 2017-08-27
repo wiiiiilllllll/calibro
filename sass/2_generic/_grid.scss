@@ -23,6 +23,8 @@ $column-width: 100% / $number-of-columns;
 	}
 }
 
+// Usage:
+// padding-left: colwidth(2);
 @function colwidth($number) {
 	@return $number * $column-width;
 }
