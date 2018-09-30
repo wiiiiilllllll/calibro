@@ -33,11 +33,6 @@ var menu = {
 		$('.nav')
 			.removeClass('nav--open')
 			.removeAttr('style');
-			// .addClass('nav--closing');
-
-		// setTimeout(function(){
-		// 	$('.nav').removeClass('nav--closing');
-		// }, 300);
 		overlay.close();
 		menu.isOpen = false;
 		setTimeout(function(){
