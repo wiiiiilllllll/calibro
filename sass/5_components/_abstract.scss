@@ -13,7 +13,10 @@
 	}
 	.abstract__right {
 		@include columns(8);
-		padding-left: 2em;
+
+		.abstract__left + & {
+			padding-left: 2em;
+		}
 	}
 }
 
