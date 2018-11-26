@@ -25,18 +25,23 @@
 
 		&:after {
 			@include triangle('bottom');
+			transform: translateY(-0.2em);
+		}
+
+		&:hover:after {
+			transform: translateY(-0.1em);
 		}
 	}
 }
 
 // <ul>, contains sub-items
 .drop__sub {
+	@include clearfix;
 	@include unstyled;
 	z-index: 20;
 
-	.drop--open & {}
-
 	@media only screen and (min-width: $bk-nav) {
+		border-radius: 0 0 .2em .2em;
 		display: none;
 		position: absolute;
 

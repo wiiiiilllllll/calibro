@@ -27,6 +27,7 @@
 	margin: 0 auto 1em;
 	padding: 0 1%;
 	text-align: center;
+	transition: color .2s ease;
 
 	&:hover {
 		color: $celery;
@@ -38,6 +39,14 @@
 
 	@media only screen and (min-width: 700px) {
 		flex-basis: 23%;
+	}
+}
+
+.member__image {
+	transition: opacity .2s ease;
+	
+	.member:hover & {
+		opacity: .8;
 	}
 }
 

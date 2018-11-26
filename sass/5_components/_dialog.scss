@@ -31,7 +31,7 @@
 // <button>
 .dialog__close {
 	$diameter: 2em;
-	background: $chicago;
+	background-color: $chicago;
 	border: 2px solid $alabaster;
 	border-radius: 50%;
 	color: $alabaster;
@@ -41,10 +41,11 @@
 	position: absolute;
 	right: ($diameter / 3) * -1;
 	top: ($diameter / 3) * -1;
+	transition: all .2s ease;
 	width: $diameter;
 
 	&:hover {
-		
+		background-color: mix($alabaster, $chicago, 20%);
 	}
 }
 

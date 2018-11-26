@@ -7,6 +7,14 @@
 	padding: 0;
 }
 
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		width: 100%;
+	}
+}
+
 @mixin triangle($d: 'right') {
 	border-color: transparent;
 	border-style: solid;
