@@ -1,0 +1,26 @@
+// Cookie banner
+// It bans cookies
+
+.cookie-banner {
+	background-color: $chicago;
+	color: #ffffff;
+	font-size: .875em;
+	padding: .5em 0;
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	p {
+		display: inline;
+		margin: 0;
+	}
+}
+
+.cookie-banner button {
+	cursor: pointer;
+	float: right;
+	padding: .25em 2em;
+}
