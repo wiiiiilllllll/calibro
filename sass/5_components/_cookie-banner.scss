@@ -5,7 +5,8 @@
 	background-color: $chicago;
 	color: #ffffff;
 	font-size: .875em;
-	padding: .5em 0;
+	padding: .5rem 1rem;
+	z-index: 40;
 
 	.wrapper {
 		display: flex;
@@ -22,5 +23,6 @@
 .cookie-banner button {
 	cursor: pointer;
 	float: right;
+	margin-left: 1em;
 	padding: .25em 2em;
 }
